@@ -1,0 +1,459 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: navy;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* Hamburger Menu */
+header {
+  background: rgb(2, 85, 240);
+  height: 65px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: blue;
+  width: 60%;
+  visibility: hidden;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all .3s;
+}
+
+.active a {
+  color: lime;
+}
+
+.menu-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.exit {
+  float: right;
+  margin: .5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-title {
+  display: none;
+}
+
+.open-nav {
+  visibility: unset;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 4em;
+}
+
+li a {
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  padding: 1em 1em;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+.open {
+  cursor: pointer;
+  margin: .5em;
+  border: none;
+  background: none;
+}
+
+.open:hover,
+.exit:hover {
+  outline: 1px solid #fff;
+}
+
+/* Cart Content */
+.cart-container {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cart-container span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+#cart-num {
+  margin-left: 30px;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container h1 {
+  text-shadow: 2px 2px 5px rgb(6, 113, 245);
+  margin-bottom: 0;
+}
+
+.title-container p {
+  margin-bottom: 30px;
+}
+
+.img-container,
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container button {
+  background: yellow;
+  color: navy;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.btn-container button:hover {
+  background: rgb(202, 202, 8);
+  color: blue;
+}
+
+.img-container h2 {
+  color: yellow;
+  margin-bottom: 0;
+}
+
+.game-container {
+  padding: 15px;
+}
+
+.game-container hr {
+  margin-bottom: 20px;
+}
+
+.game-container span {
+  color: yellow;
+  font-size: 1.1rem;
+}
+
+.game-cover {
+  width: 300px;
+}
+
+/* Order Content */
+.order-container h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.order {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.cart-img {
+  margin: auto 0;
+  margin-right: 20px;
+  width: 80px;
+}
+
+.order-details {
+  font-size: 0.9rem;
+  width: 60%;
+}
+
+.order span,
+.total-price {
+  color: yellow;
+}
+
+.order button {
+  border: none;
+  background: none;
+  outline: none;
+  color: red;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.cart-button-container {
+  display: flex;
+  margin-right: 10px;
+}
+
+.cart-item-price {
+  align-self: center;
+}
+
+.order-container {
+  display: none;
+}
+
+/* Placing Order */
+.cart-total-price {
+  display: flex;
+  justify-content: space-around;
+}
+
+.place-order-button {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px;
+  background: yellow;
+  color: navy;
+  cursor: pointer;
+}
+
+.place-order-button:hover {
+  background: rgb(143, 143, 1);
+  color: #fff;
+}
+
+.total-price,
+#total-price {
+  font-size: 1.1rem;
+}
+
+/* Modal Content */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 470px;
+  width: 330px;
+  padding: 10px;
+  margin: auto;
+  background: #252525;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: lime;
+  margin-bottom: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal-close-button-container button  {
+  color: #fff;
+  font-size: 1.2rem;
+  float: right;
+  border: none;
+  background: none;
+}
+
+.modal-close-button-container button:hover {
+  outline: 1px solid #fff;
+}
+
+.modal-container input,
+.modal-container select {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 20px;
+}
+
+.modal-container label {
+  margin-bottom: 5px;
+}
+
+.modal-container label {
+  color: lime;
+  display: block;
+}
+
+.modal-order-button {
+  background: lime;
+  color: #252525;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-order-button:hover {
+  background: rgb(1, 106, 1);
+  color: #fff;
+}
+
+.modal-order-button:active {
+  border-radius: 10px;
+}
+
+.modal-container {
+  display: none;
+}
+
+/* Media Query */
+@media (min-width: 770px) {
+  .open {
+    display: none;
+  }
+  .nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+    width: 200px;
+  }
+  main {
+    margin-left: 200px;
+    margin-top: 60px;
+  }
+  .exit {
+    display: none;
+  }
+  .sidebar-title {
+    font-size: 1.3rem;
+    color: yellow;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .order-details {
+    font-size: 1rem;
+    width: 50%;
+  }
+  .order-container h3 {
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+  .nav ul {
+    margin-top: 20px;
+  }
+  .cart-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .cart-img {
+    width: 100px;
+  }
+  .cart-container a {
+    font-size: 1.6rem;
+  }
+  header {
+    left: 200px;
+  }
+  .cart-button-container button {
+    font-size: 0.9rem;
+  }
+  .cart-item-price {
+    font-size: 1.2rem;
+  }
+  .total-price,
+  #total-price {
+    font-size: 1.3rem;
+  }
+  .cart-container span,
+  .cart-container p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .game-info {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .game-card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+  }
+  .order-details {
+    text-align: center;
+  }
+  .order-container h3 {
+    padding: 15px 0;
+    font-size: 1.5rem;
+  }
+  .cart-total-price {
+    display: block;
+    text-align: center;
+  }
+  .total-price {
+    margin-bottom: -25px;
+  }
+  .total-price,
+  #total-price {
+    font-size: 1.5rem;
+  }
+  .place-order-button {
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .cart-img {
+    width: 150px;
+  }
+  .order-details {
+    font-size: 1.2rem;
+  }
+  .cart-item-price {
+    font-size: 1.4rem;
+  }
+  .cart-container span,
+  .cart-container p {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}
