@@ -420,6 +420,8 @@ main {
   }
   .order-details {
     text-align: left;
+    font-size: 1.2rem;
+    width: 25%;
   }
   .order-container h3 {
     padding: 15px 0;
@@ -444,9 +446,6 @@ main {
   }
   .cart-img {
     width: 150px;
-  }
-  .order-details {
-    font-size: 1.2rem;
   }
   .cart-item-price {
     font-size: 1.4rem;
